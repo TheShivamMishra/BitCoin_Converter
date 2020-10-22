@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BitCoin_Converter</title>
+    <meta name="description" content="An website to demonstrate working of Api.">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: darksalmon;
+      }
+      h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2.9rem;
+            color:black;
+          }
+      .container {
+        width: 80%;
+        margin: 10% auto;
+        text-align: center;
+      }
+      button {
+        padding: 2.9px;
+        width: 20%;
+        border-radius: 15px;
+        padding:5px;
+        border: 2px solid lightblue;
+      }
+      select {
+        margin: 20px;
+        border-radius: 10px;
+        border: 2px solid lightblue;
+        width: 20%;
+        padding:5px;
+      }
+      @media (max-width: 520px) {
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2.1rem;
+            color:black;
+          }
+        select {
+          margin: 20px 0;
+          border-radius: 10px;
+          width: 45%;
+          border: 2px solid lightblue;
+          padding:3px;
+        }
+        button {
+          width: 40%;
+          border: 4px solid lightblue;
+          padding:3px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>₿ <br>Bit-Coin↔️fiat Converter.</h1>
+      <select name="crypto">
+        <option value="BTC">Bitcoin</option>
+        <option value="ETH">Ethereum</option>
+        <option value="LTC">Litecoins</option>
+      </select>
+      <select name="fiat">
+        <option value="USD">USD</option>
+        <option value="INR">INR</option>
+        <option value="EUR">EUR</option>
+      </select>
+      <br />
+      <button type="submit">Check</button>
+    </div>
+  </body>
+</html>
