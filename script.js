@@ -15,16 +15,13 @@ app.post("/",function(req,res){   //handling post request to main route;
     var fiat = req.body.fiat;
     var url = "https://apiv2.bitcoinaverage.com/indices/global/ticker/";
     var finalUrl = url + crypto + fiat;
-    request(finalUrl,function(error,response,body){
 
-        var data = JSON.parse(body);   //converting json data into javascript;
-        document.querySelector("a").innerHTML = crypto;
-        document.querySelector("b").innerHTML = fiat;
-        document.querySelector("c").innerHTML = body.last;
-        console.log(data.last);
+    request(finalUrl,function(error,response,body){           //request method to fetch data from other api.
+        var data = JSON.parse(body);  //converting json data into javascript;
+        var price = data.last;   
+        res.send("<h1>The Current value of " + crypto + " in " + fiat + " is " + price + "</h1>");
     });
 
-    res.sendFile(__dirname + "/bit.html");
 });
 
 app.listen(3000,function(){      //seting up the server to listen on port 3000;
