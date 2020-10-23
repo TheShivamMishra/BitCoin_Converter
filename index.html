@@ -61,18 +61,20 @@
   <body>
     <div class="container">
       <h1>₿ <br>Bit-Coin↔️fiat Converter.</h1>
+      <form action="/" method="POST">
       <select name="crypto">
         <option value="BTC">Bitcoin</option>
         <option value="ETH">Ethereum</option>
         <option value="LTC">Litecoins</option>
       </select>
       <select name="fiat">
-        <option value="USD">USD</option>
-        <option value="INR">INR</option>
-        <option value="EUR">EUR</option>
+        <option value="USD">US Dollar</option>
+        <option value="INR">IN Rupees</option>
+        <option value="GBP">GB Pounds</option>
       </select>
       <br />
-      <button type="submit">Check</button>
+      <button type="submit" name="submit">Check</button>
+      </form>
     </div>
   </body>
 </html>
